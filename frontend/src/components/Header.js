@@ -1,11 +1,10 @@
 import react from 'react';
 
-export default function Header({ title, children }) {       //desestruturação da propriedade; children: acessar o conteudo do header
+export default function Header({ title }) {       //desestruturação da propriedade; 
   return (
     <header>
       <h1>{title}</h1>
 
-      {children} 
     </header>
   );
 }
