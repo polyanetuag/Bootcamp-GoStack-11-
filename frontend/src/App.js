@@ -1,29 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Header from './components/Header';
 
 /* Conceitos para entender o react
   Componente
   Propriedade
-  Estado
+  Estado e Imutabilidade
 */
 
 function App() {                // primeiro componente
+  const [projects, setProjects] = useState(['Desenvolvimento de app', 'Front-end web']);       // utilizando estados
+  /*
+  UseState retorna um array com 2 posições 
+  
+  1. Variável com o seu valor inicial
+  2.Função para atualizarmos esse valor
+  */
+
+  function handleAddProject() {
+    //projects.push(`Novo Projeto ${Date.now()}`)                       o push não respeita a imutabilidade
+
+    setProjects([...projects, `Novo Projeto ${Date.now()}`])            // conceito de imutabilidade
+  }
+
   return (                      // fragments
     <>                         
-      <Header title="Homepage">
-        <ul>
-          <li>Homepage</li>
-          <li>Projects</li>
-        </ul>
-      </Header>
-      <Header title="Projects">
+      < Header title="Projects" />
+
       <ul>
-          <li>Homepage</li>
-          <li>Projects</li>
-          <li>Login</li>
-        </ul>
-      </Header>
+        {projects.map(project => <li key={project}>{project}</li>)}
+      </ul>
+
+      <button type="button" onClick={}>Adicionar projeto </button>n
   </>
   );
 }
