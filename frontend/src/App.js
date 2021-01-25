@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+import './App.css';
+import backgroundImage from './assets/background.jpeg';       //importando uma imagem
+
 import Header from './components/Header';
 
 /* Conceitos para entender o react
@@ -27,11 +30,13 @@ function App() {                // primeiro componente
     <>                         
       < Header title="Projects" />
 
+      <img width={300} src={backgroundImage} />
+
       <ul>
         {projects.map(project => <li key={project}>{project}</li>)}
       </ul>
 
-      <button type="button" onClick={}>Adicionar projeto </button>n
+      <button type="button" onClick={handleAddProject}>Adicionar projeto</button>
   </>
   );
 }
