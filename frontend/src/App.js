@@ -26,10 +26,17 @@ function App() {                // primeiro componente
     2.Função para atualizarmos esse valor
   */
 
-  function handleAddProject() {
-    //projects.push(`Novo Projeto ${Date.now()}`)                       o push não respeita a imutabilidade
+  async function handleAddProject() {
+    //setProjects([...projects, `Novo Projeto ${Date.now()}`])            // conceito de imutabilidade
 
-    setProjects([...projects, `Novo Projeto ${Date.now()}`])            // conceito de imutabilidade
+    const response = await api.post('projects', {
+      title: `Novo Projeto ${Date.now()}`,
+      owner: "Polyane Tuag"
+    });
+
+    const project = response.data;
+
+    setProjects([...projects, project]);
   }
 
   return (                      // fragments
