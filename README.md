@@ -8,25 +8,29 @@
 
 </h3>
 
-
-<!-- 
-<h1 align="center">
-    <img src="">
-</h1> -->
-
-
 ## 📚 Sobre
 
 O GoStack é um treinamento online,  totalmente prático e intensivo, no formato de bootcamp. Oferece ao aluno conhecer todos os ecossistemas das tecnologias NodeJS, ReactJS e React Native. 
+
+Nessa jornada, vamos aprender sobre Back-end, Front-end e Mobile, conceitos e aplicação de cada um deles.
 
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
+- ReactJS
+- React Native
+- TypesScript
 
 ---
+## ⚙️ Back-End
 
+- NodeJS
+- NPM e Yarn
+- ExpressJS (Framework)
+
+---
 ### 📋 Licença
 
 Esse projeto está sob a licença MIT.
